@@ -1,0 +1,16 @@
+{
+  "name": "revealjs-template",
+  "version": "1.0.0",
+  "description": "A template for Reveal.js presentations",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "babelify": "^5.0.3",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^1.3.3",
+    "reveal.js": "hakimel/reveal.js.git#3.0.0"
+  },
+  "author": "flying sheep",
+  "license": "GPLv3"
+}
