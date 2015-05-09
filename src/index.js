@@ -1,28 +1,32 @@
+import 'babel-core/polyfill'
+import 'whatwg-fetch'
+
 import head   from 'reveal.js/lib/js/head.min'
 import Reveal from 'reveal.js/js/reveal'
 
-var prefix = 'node_modules/reveal.js'
+import loadDataSrcSVG from './data-src-svg'
+import loadPrintCSS   from './print-css'
 
-document.addEventListener("DOMContentLoaded", (event) => {
-	window.Reveal = Reveal // plugins need that
-	
-	// see: https://github.com/hakimel/reveal.js#configuration 
+var prefix = 'node_modules/reveal.js/plugin'
+
+document.addEventListener('DOMContentLoaded', (event) => {
+	window.Reveal = Reveal
 	Reveal.initialize({
 		controls: true,
 		progress: true,
 		history: true,
 		center: true,
-		transition: 'slide', // none/fade/slide/convex/concave/zoom
-		// Optional reveal.js plugins
+		transition: 'fade',
 		dependencies: [
-			{ src: `${prefix}/lib/js/classList.js`, condition: function() { return !document.body.classList; } },
-			{ src: `${prefix}/plugin/markdown/marked.js`, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: `${prefix}/plugin/markdown/markdown.js`, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: `${prefix}/plugin/highlight/highlight.js`, async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: `${prefix}/plugin/zoom-js/zoom.js`, async: true },
-			{ src: `${prefix}/plugin/notes/notes.js`, async: true }
-		]
+			{ src: `${prefix}/markdown/marked.js`, condition: () => !!document.querySelector('[data-markdown]') },
+			{ src: `${prefix}/markdown/markdown.js`, condition: () => !!document.querySelector('[data-markdown]') },
+			{ src: `${prefix}/highlight/highlight.js`, async: true, condition: () => !!document.querySelector('pre code'), callback: () => hljs.initHighlightingOnLoad() },
+			{ src: `${prefix}/zoom-js/zoom.js`, async: true },
+			{ src: `${prefix}/notes/notes.js`, async: true },
+			{ src: `${prefix}/math/math.js`, async: true },
+		],
 	})
-	
-	// insert code here
+
+	loadDataSrcSVG()
+	loadPrintCSS()
 })
