@@ -1,47 +1,59 @@
-var gulp         = require('gulp')
-var connect      = require('gulp-connect')
-var plumber      = require('gulp-plumber')
-var browserify   = require('gulp-browserify')
-var sass         = require('gulp-sass')
 var autoprefixer = require('gulp-autoprefixer')
+var browserify   = require('gulp-browserify')
+var concat			 = require('gulp-concat')
+var connect      = require('gulp-connect')
+var gulp         = require('gulp')
+var haml		     = require('gulp-haml')
+var plumber      = require('gulp-plumber')
+var sass         = require('gulp-sass')
+
+var paths = {
+	assets: 'assets',
+	js: 'source/slides.js',
+	haml: 'source/index.haml',
+	root: './',
+	scss: 'source/slides.scss'
+}
 
 gulp.task('js', function() {
-	return gulp.src('src/index.js')
+	return gulp.src(paths.js)
 		.pipe(plumber())
 		.pipe(browserify({
 			transform: ['babelify'],
 			debug: true,
 		}))
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest(paths.assets))
 		.pipe(connect.reload())
 })
 
 gulp.task('sass', function() {
-	return gulp.src('src/index.scss')
+	return gulp.src(paths.scss)
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest(paths.assets))
 		.pipe(connect.reload())
 })
 
-gulp.task('html', function() {
-	return gulp.src('index.html')
+gulp.task('haml', function() {
+	return gulp.src(paths.haml, {read: false})
+		.pipe(haml())
+		.pipe(gulp.dest(paths.root))
 		.pipe(connect.reload())
 })
 
 gulp.task('watch', function() {
-	gulp.watch('src/*.js',   ['js'])
-	gulp.watch('src/*.scss', ['sass'])
-	gulp.watch('index.html', ['html'])
+	gulp.watch(paths.js,   ['js'])
+	gulp.watch(paths.scss, ['sass'])
+	gulp.watch(paths.haml, ['haml'])
 })
 
 gulp.task('connect', function() {
 	connect.server({
 		livereload: true,
-		port: 8000,
+		port: 8000
 	})
 })
 
 gulp.task('default', ['watch', 'connect'])
-gulp.task('build', ['js', 'sass'])
+gulp.task('build', ['js', 'sass', 'haml'])

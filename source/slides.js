@@ -4,15 +4,15 @@ import 'whatwg-fetch'
 import head   from 'reveal.js/lib/js/head.min'
 import Reveal from 'reveal.js/js/reveal'
 
-import loadDataSrcSVG from './data-src-svg'
-import loadPrintCSS   from './print-css'
+import loadDataSrcSVG from './svg'
+import loadPrintCSS   from './print'
 
 var prefix = 'node_modules/reveal.js/plugin'
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	window.Reveal = Reveal
 	Reveal.initialize({
-		controls: true,
+		controls: false,
 		progress: true,
 		history: true,
 		center: true,

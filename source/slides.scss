@@ -1,0 +1,37 @@
+@import "../node_modules/reveal.js/css/reveal.scss";
+@import "../node_modules/reveal.js/css/theme/source/black.scss";
+@import "../node_modules/reveal.js/lib/font/source-sans-pro/source-sans-pro.css";
+
+$brown: #33312F;
+$red: #BF370A;
+$smoke: #EAEAEA;
+$white: #fff;
+$black: #000;
+
+$body-background: $brown;
+$text-color: $white;
+
+body {
+  background-color: $body-background;
+  color: $text-color;
+}
+
+.reveal {
+  h1, h2, h3 {
+    color: $text-color;
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .progress {
+    background-color: $black;
+
+    span {
+      background-color: $red;
+    }
+  }
+}
