@@ -47,3 +47,5 @@ More features!
 
 		* Append `?print-pdf` to the URL to be able to [convert it to PDF via Chrome](https://github.com/hakimel/reveal.js#pdf-export)
 		* Use `<svg data-src="...svg"></svg>` to load a SVG containing `class="fragment"` elements or to style SVG elements with CSS
+
+[![](http://thoughtbot.github.io/images/signature.svg =250x)][http://joshuaogle.com]
