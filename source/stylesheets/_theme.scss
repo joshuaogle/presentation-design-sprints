@@ -1,0 +1,277 @@
+body {
+  background-color: $body-background;
+  color: $text-color;
+}
+
+.reveal {
+  font-family: Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+
+  .controls {
+    display: none;
+  }
+
+  .progress {
+    background-color: $black;
+
+    span {
+      background-color: $red;
+    }
+  }
+
+  .slides > section {
+    line-height: 1.3;
+    font-weight: inherit;
+
+    > section {
+      line-height: 1.3;
+      font-weight: inherit;
+    }
+  }
+
+  h1, h2, h3 {
+    color: $text-color;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    text-shadow: none;
+    text-transform: none;
+    word-wrap: break-word;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    margin: 20px 0;
+    line-height: 1.3;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  strong,
+  b {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  ol,
+  dl,
+  ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      list-style-type: square;
+
+      ul {
+        list-style-type: circle;
+      }
+
+      display: block;
+      margin-left: 40px;
+    }
+
+    ol {
+      display: block;
+      margin-left: 40px;
+    }
+  }
+
+  ol {
+    ol,
+    ul {
+      display: block;
+      margin-left: 40px;
+    }
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 40px;
+  }
+
+  q {
+    quotes: none;
+  }
+
+  blockquote {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-style: italic;
+    margin: 20px auto;
+    padding: 5px;
+    position: relative;
+    quotes: none;
+    width: 70%;
+
+    p {
+      &:first-child,
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+
+  q {
+    font-style: italic;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+
+    code {
+      display: block;
+      padding: 5px;
+      overflow: auto;
+      max-height: 400px;
+      word-wrap: normal;
+      background: #3F3F3F;
+      color: #DCDCDC;
+    }
+  }
+
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
+      font-weight: bold;
+      text-align: left;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      border-bottom: 1px solid;
+    }
+
+    td {
+      text-align: left;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      border-bottom: 1px solid;
+    }
+
+    th[align="center"],
+    td[align="center"] {
+      text-align: center;
+    }
+
+    th[align="right"],
+    td[align="right"] {
+      text-align: right;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  sup {
+    vertical-align: super;
+  }
+
+  sub {
+    vertical-align: sub;
+  }
+
+  small {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+
+    * {
+      vertical-align: top;
+    }
+  }
+
+  a {
+    color: #42affa;
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: #8dcffc;
+      text-shadow: none;
+      border: none;
+    }
+  }
+
+  .roll span:after {
+    color: #fff;
+    background: #068ee9;
+  }
+
+  section img {
+    margin: 15px 0px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a {
+    img {
+      transition: all 0.15s linear;
+    }
+
+    &:hover img {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #42affa;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+    }
+  }
+
+  .slide-number {
+    color: #42affa;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: #bee4fd;
+  text-shadow: none;
+}

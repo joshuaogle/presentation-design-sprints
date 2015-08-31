@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "A template for Reveal.js presentations",
   "main": "Gulpfile.js",
+  "private": true,
   "dependencies": {
     "babel-core": "^5.2.17",
     "babelify": "^6.0.2",

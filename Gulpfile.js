@@ -1,32 +1,32 @@
-var autoprefixer = require('gulp-autoprefixer')
-var browserify   = require('gulp-browserify')
-var concat			 = require('gulp-concat')
-var connect      = require('gulp-connect')
-var gulp         = require('gulp')
-var haml		     = require('gulp-haml')
-var plumber      = require('gulp-plumber')
-var sass         = require('gulp-sass')
+var autoprefixer = require("gulp-autoprefixer")
+var browserify   = require("gulp-browserify")
+var concat			 = require("gulp-concat")
+var connect      = require("gulp-connect")
+var gulp         = require("gulp")
+var haml		     = require("gulp-haml")
+var plumber      = require("gulp-plumber")
+var sass         = require("gulp-sass")
 
 var paths = {
-	assets: 'assets',
-	js: 'source/slides.js',
-	haml: 'source/index.haml',
-	root: './',
-	scss: 'source/slides.scss'
+	assets: "assets",
+	js: "source/javascripts/**/*.js",
+	haml: "source/templates/index.haml",
+	root: "./",
+	scss: "source/stylesheets/slides.scss"
 }
 
-gulp.task('js', function() {
+gulp.task("js", function() {
 	return gulp.src(paths.js)
 		.pipe(plumber())
 		.pipe(browserify({
-			transform: ['babelify'],
+			transform: ["babelify"],
 			debug: true,
 		}))
 		.pipe(gulp.dest(paths.assets))
 		.pipe(connect.reload())
 })
 
-gulp.task('sass', function() {
+gulp.task("sass", function() {
 	return gulp.src(paths.scss)
 		.pipe(plumber())
 		.pipe(sass())
@@ -35,25 +35,25 @@ gulp.task('sass', function() {
 		.pipe(connect.reload())
 })
 
-gulp.task('haml', function() {
-	return gulp.src(paths.haml, {read: false})
+gulp.task("haml", function() {
+	return gulp.src(paths.haml)
 		.pipe(haml())
 		.pipe(gulp.dest(paths.root))
 		.pipe(connect.reload())
 })
 
-gulp.task('watch', function() {
-	gulp.watch(paths.js,   ['js'])
-	gulp.watch(paths.scss, ['sass'])
-	gulp.watch(paths.haml, ['haml'])
+gulp.task("watch", function() {
+	gulp.watch(paths.js,   ["js"])
+	gulp.watch(paths.scss, ["sass"])
+	gulp.watch(paths.haml, ["haml"])
 })
 
-gulp.task('connect', function() {
+gulp.task("connect", function() {
 	connect.server({
 		livereload: true,
 		port: 8000
 	})
 })
 
-gulp.task('default', ['watch', 'connect'])
-gulp.task('build', ['js', 'sass', 'haml'])
+gulp.task("default", ["watch", "connect"])
+gulp.task("build", ["js", "sass", "haml"])
