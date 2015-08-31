@@ -32,7 +32,7 @@ body {
 
   h1, h2, h3 {
     color: $text-color;
-    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-family: $sans-serif;
     font-weight: 300;
     letter-spacing: normal;
     line-height: 1.2;
@@ -156,15 +156,15 @@ body {
 
   pre {
     display: block;
-    position: relative;
-    width: 90%;
-    margin: 20px auto;
-    text-align: left;
-    font-size: 0.55em;
     font-family: monospace;
+    font-size: 0.55em;
     line-height: 1.2em;
+    margin: 1em auto;
+    padding: 0.5em;
+    position: relative;
+    text-align: left;
+    width: 90%;
     word-wrap: break-word;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 
     code {
       display: block;

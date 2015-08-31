@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		progress: true,
 		history: true,
 		center: true,
-		transition: 'fade',
+		transition: 'slide',
 		dependencies: [
 			{ src: `${prefix}/markdown/marked.js`, condition: () => !!document.querySelector('[data-markdown]') },
 			{ src: `${prefix}/markdown/markdown.js`, condition: () => !!document.querySelector('[data-markdown]') },

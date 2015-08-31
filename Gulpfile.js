@@ -9,8 +9,9 @@ var sass         = require("gulp-sass")
 
 var paths = {
 	assets: "assets",
-	js: "source/javascripts/**/*.js",
+	fonts: "source/fonts/*.*",
 	haml: "source/templates/index.haml",
+	js: "source/javascripts/**/*.js",
 	root: "./",
 	scss: "source/stylesheets/slides.scss"
 }
@@ -31,6 +32,12 @@ gulp.task("sass", function() {
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer())
+		.pipe(gulp.dest(paths.assets))
+		.pipe(connect.reload())
+})
+
+gulp.task("fonts", function() {
+	return gulp.src(paths.fonts)
 		.pipe(gulp.dest(paths.assets))
 		.pipe(connect.reload())
 })
@@ -56,4 +63,4 @@ gulp.task("connect", function() {
 })
 
 gulp.task("default", ["watch", "connect"])
-gulp.task("build", ["js", "sass", "haml"])
+gulp.task("build", ["js", "sass", "fonts", "haml"])

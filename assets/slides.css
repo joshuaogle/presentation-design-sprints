@@ -1289,6 +1289,16 @@ body {
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
+@font-face {
+  font-family: "Colfax";
+  font-weight: normal;
+  src: url("Colfax-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Colfax";
+  font-weight: bold;
+  src: url("Colfax-Bold.woff") format("woff"); }
+
 body {
   background-color: #33312F;
   color: #fff; }
@@ -1311,7 +1321,7 @@ body {
       font-weight: inherit; }
   .reveal h1, .reveal h2, .reveal h3 {
     color: #fff;
-    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-family: Colfax, Helvetica, sans-serif;
     font-weight: 300;
     letter-spacing: normal;
     line-height: 1.2;
@@ -1386,15 +1396,15 @@ body {
     font-family: monospace; }
   .reveal pre {
     display: block;
-    position: relative;
-    width: 90%;
-    margin: 20px auto;
-    text-align: left;
-    font-size: 0.55em;
     font-family: monospace;
+    font-size: 0.55em;
     line-height: 1.2em;
-    word-wrap: break-word;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+    margin: 1em auto;
+    padding: 0.5em;
+    position: relative;
+    text-align: left;
+    width: 90%;
+    word-wrap: break-word; }
     .reveal pre code {
       display: block;
       padding: 5px;
