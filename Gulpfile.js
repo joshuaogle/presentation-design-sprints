@@ -12,15 +12,20 @@ var sass         		= require("gulp-sass")
 var paths = {
 	assets: "assets",
 	fonts: "source/fonts/*.*",
-	html: "source/templates/slides.html",
+	images: "source/images/*",
 	js: "source/javascripts/**/*.js",
 	root: "./",
-	scss: "source/stylesheets/slides.scss"
+	stylesheets: "source/stylesheets/**/*.scss",
+	stylesheets_master: "source/stylesheets/slides.scss",
+	stylesheets_dir: "source/stylesheets/",
+	templates: "source/templates/**/*.html",
+	templates_dir: "source/templates/",
+	templates_master: "source/templates/slides.html"
 }
 
-gulp.task("html", function() {
-	nunjucksRender.nunjucks.configure(["source/templates/"])
-	return gulp.src(paths.html)
+gulp.task("layout", function() {
+	nunjucksRender.nunjucks.configure(paths.templates_dir)
+	return gulp.src(paths.templates_master)
 	  .pipe(nunjucksRender({
 			red: "#c52d2f",
 			slate: "#393b44"
@@ -42,7 +47,7 @@ gulp.task("js", function() {
 })
 
 gulp.task("sass", function() {
-	return gulp.src(paths.scss)
+	return gulp.src(paths.stylesheets)
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer())
@@ -56,10 +61,16 @@ gulp.task("fonts", function() {
 		.pipe(connect.reload())
 })
 
+gulp.task("images", function() {
+	return gulp.src(paths.images)
+		.pipe(gulp.dest(paths.assets))
+		.pipe(connect.reload())
+})
+
 gulp.task("watch", function() {
 	gulp.watch(paths.js,   ["js"])
-	gulp.watch(paths.scss, ["sass"])
-	gulp.watch(paths.html, ["html"])
+	gulp.watch(paths.stylesheets, ["sass"])
+	gulp.watch(paths.templates, ["layout"])
 })
 
 gulp.task("connect", function() {
@@ -69,5 +80,5 @@ gulp.task("connect", function() {
 	})
 })
 
-gulp.task("build", ["js", "sass", "fonts", "html"])
+gulp.task("build", ["js", "sass", "fonts", "images", "layout"])
 gulp.task("default", ["build", "watch", "connect"])
