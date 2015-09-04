@@ -5,51 +5,11 @@
     <h1>Product Design Sprints</h1>
   </section>
 
-  <section>
-    <h1>Product Design Sprint</h1>
-  </section>
-
-  <section data-background="{{ red }}">
-    <img src="assets/understand.png">
-    <h2 class="day">Day 1</h2>
-    <h1>Understand</h1>
-  </section>
-
-  <section data-background="{{ red }}">
-    <img src="assets/diverge.png">
-    <h2 class="day">Day 2</h2>
-    <h1>Diverge</h1>
-  </section>
-
-  <section data-background="{{ red }}">
-    <img src="assets/converge.png">
-    <h2 class="day">Day 3</h2>
-    <h1>Converge</h1>
-  </section>
-
-  <section data-background="{{ red }}">
-    <img src="assets/prototype.png">
-    <h2 class="day">Day 4</h2>
-    <h1>Prototype</h1>
-  </section>
-
-  <section data-background="{{ red }}">
-    <img src="assets/test.png">
-    <h2 class="day">Day 5</h2>
-    <h1>User testing</h1>
-  </section>
-
-  <section class="links">
-    <p>
-      <a href="http://github.com/joshuaogle/presentation-design-sprints">
-        http://github.com/joshuaogle/presentation-design-sprints
-      </a>
-    </p>
-
-    <p>
-      <a href="http://github.com/joshuaogle/presentation-design-sprints">
-        http://github.com/joshuaogle/presentation-design-sprints
-      </a>
-    </p>
-  </section>
+  {% include "_intro.html" %}
+  {% include "_understand.html" %}
+  {% include "_diverge.html" %}
+  {% include "_converge.html" %}
+  {% include "_prototype.html" %}
+  {% include "_testing.html" %}
+  {% include "_outro.html" %}
 {% endblock %}
