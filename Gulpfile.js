@@ -21,7 +21,10 @@ var paths = {
 gulp.task("html", function() {
 	nunjucksRender.nunjucks.configure(["source/templates/"])
 	return gulp.src(paths.html)
-	  .pipe(nunjucksRender())
+	  .pipe(nunjucksRender({
+			red: "#c52d2f",
+			slate: "#393b44"
+		}))
 		.pipe(rename("index.html"))
 		.pipe(gulp.dest(paths.root))
 		.pipe(connect.reload())
@@ -66,5 +69,5 @@ gulp.task("connect", function() {
 	})
 })
 
-gulp.task("default", ["build", "watch", "connect"])
 gulp.task("build", ["js", "sass", "fonts", "html"])
+gulp.task("default", ["build", "watch", "connect"])

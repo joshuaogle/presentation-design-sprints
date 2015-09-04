@@ -13,10 +13,10 @@ body {
   }
 
   .progress {
-    background-color: $black;
+    background-color: $progress-background;
 
     span {
-      background-color: $red;
+      background-color: $progress-color;
     }
   }
 
@@ -267,6 +267,10 @@ body {
 
   .slide-number {
     color: #42affa;
+  }
+
+  .slides .has-dark-background * {
+    color: $white;
   }
 }
 

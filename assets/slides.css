@@ -1300,7 +1300,7 @@ body {
   src: url("Colfax-Bold.woff") format("woff"); }
 
 body {
-  background-color: #33312F;
+  background-color: #393b44;
   color: #fff; }
 
 .reveal {
@@ -1312,7 +1312,7 @@ body {
   .reveal .progress {
     background-color: #000; }
     .reveal .progress span {
-      background-color: #BF370A; }
+      background-color: #c52d2f; }
   .reveal .slides > section {
     line-height: 1.3;
     font-weight: inherit; }
@@ -1471,6 +1471,8 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
   .reveal .slide-number {
     color: #42affa; }
+  .reveal .slides .has-dark-background * {
+    color: #fff; }
 
 ::-moz-selection {
   color: #fff;
