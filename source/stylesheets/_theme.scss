@@ -5,7 +5,7 @@ body {
 
 .reveal {
   font-family: Helvetica, sans-serif;
-  font-size: 38px;
+  font-size: $base-font-size;
   font-weight: normal;
 
   .controls {
@@ -43,15 +43,23 @@ body {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: $base-font-size * 2;
   }
 
   h2 {
-    font-size: 1.8em;
+    font-size: $base-font-size * 1.8;
   }
 
   h3 {
-    font-size: 1.4em;
+    font-size: $base-font-size * 1.4;
+  }
+
+  .day {
+    font-size: $small-font-size;
+    line-height: 1em;
+    margin: 1em 0 0;
+    opacity: 0.5;
+    text-style: italic;
   }
 
   p {
@@ -268,6 +276,12 @@ body {
 
   .slides .has-dark-background * {
     color: $white;
+  }
+
+  .links {
+    a {
+      font-size: $small-font-size;
+    }
   }
 }
 
