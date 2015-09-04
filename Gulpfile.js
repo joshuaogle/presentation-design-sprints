@@ -1,20 +1,31 @@
-var autoprefixer = require("gulp-autoprefixer")
-var browserify   = require("gulp-browserify")
-var concat			 = require("gulp-concat")
-var connect      = require("gulp-connect")
-var gulp         = require("gulp")
-var haml		     = require("gulp-haml")
-var plumber      = require("gulp-plumber")
-var sass         = require("gulp-sass")
+var autoprefixer   	= require("gulp-autoprefixer")
+var browserify     	= require("gulp-browserify")
+var concat			   	= require("gulp-concat")
+var connect        	= require("gulp-connect")
+var data 						= require("gulp-data")
+var gulp           	= require("gulp")
+var nunjucksRender 	= require("gulp-nunjucks-render")
+var plumber      		= require("gulp-plumber")
+var rename      		= require("gulp-rename")
+var sass         		= require("gulp-sass")
 
 var paths = {
 	assets: "assets",
 	fonts: "source/fonts/*.*",
-	haml: "source/templates/index.haml",
+	html: "source/templates/slides.html",
 	js: "source/javascripts/**/*.js",
 	root: "./",
 	scss: "source/stylesheets/slides.scss"
 }
+
+gulp.task("html", function() {
+	nunjucksRender.nunjucks.configure(["source/templates/"])
+	return gulp.src(paths.html)
+	  .pipe(nunjucksRender())
+		.pipe(rename("index.html"))
+		.pipe(gulp.dest(paths.root))
+		.pipe(connect.reload())
+})
 
 gulp.task("js", function() {
 	return gulp.src(paths.js)
@@ -42,17 +53,10 @@ gulp.task("fonts", function() {
 		.pipe(connect.reload())
 })
 
-gulp.task("haml", function() {
-	return gulp.src(paths.haml)
-		.pipe(haml())
-		.pipe(gulp.dest(paths.root))
-		.pipe(connect.reload())
-})
-
 gulp.task("watch", function() {
 	gulp.watch(paths.js,   ["js"])
 	gulp.watch(paths.scss, ["sass"])
-	gulp.watch(paths.haml, ["haml"])
+	gulp.watch(paths.html, ["html"])
 })
 
 gulp.task("connect", function() {
@@ -62,5 +66,5 @@ gulp.task("connect", function() {
 	})
 })
 
-gulp.task("default", ["watch", "connect"])
-gulp.task("build", ["js", "sass", "fonts", "haml"])
+gulp.task("default", ["build", "watch", "connect"])
+gulp.task("build", ["js", "sass", "fonts", "html"])
