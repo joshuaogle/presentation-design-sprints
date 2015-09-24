@@ -1,17 +1,20 @@
 @font-face {
   font-family: "Colfax";
+  src: url("Colfax-Medium.woff") format("woff");
   font-weight: normal;
-  src: url("Colfax-Regular.woff") format("woff");
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Colfax";
-  font-weight: lighter;
+  font-family: "ColfaxLighter";
   src: url("Colfax-Light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Colfax";
-  font-weight: bold;
+  font-family: "ColfaxBold";
   src: url("Colfax-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }

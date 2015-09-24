@@ -4,9 +4,8 @@ body {
 }
 
 .reveal {
-  font-family: Helvetica, sans-serif;
+  font-family: $sans-serif-lighter;
   font-size: $base-font-size;
-  font-weight: normal;
 
   .controls {
     display: none;
@@ -33,7 +32,6 @@ body {
   h1, h2, h3 {
     color: $text-color;
     font-family: $sans-serif;
-    font-weight: 100;
     letter-spacing: normal;
     line-height: 1.2;
     margin: 0 0 20px 0;
@@ -56,10 +54,10 @@ body {
 
   .day {
     font-size: $small-font-size;
+    font-weight: normal;
     line-height: 1em;
     margin: 1em 0 0;
     opacity: 0.5;
-    text-style: italic;
   }
 
   p {
@@ -97,6 +95,10 @@ body {
 
   ul {
     list-style-type: disc;
+
+    li {
+      margin: 0.5em 0;
+    }
 
     ul {
       list-style-type: square;
@@ -256,6 +258,8 @@ body {
 
   section img {
     margin: 15px 0px;
+    max-height: 5em;
+    vertical-align: middle;
   }
 
   a {
@@ -283,10 +287,50 @@ body {
       font-size: $small-font-size;
     }
   }
+
+  .history {
+    color: #AAA;
+    font-size: 1.5em;
+
+    &-google-ventures {
+      max-width: 30%;
+    }
+
+    &-thoughtbot {
+      max-height: 3em;
+    }
+
+    .divider {
+      margin: 0 1em;
+    }
+  }
 }
 
 ::selection {
   color: #fff;
   background: #bee4fd;
   text-shadow: none;
+}
+
+.schedule-list {
+  li {
+    float: left;
+    font-size: $small-font-size * 0.8;
+    list-style: none;
+    padding: 0 1%;
+    text-align: center;
+    width: 18%;
+
+    h2 {
+      font-size: $small-font-size * 0.9;
+    }
+
+    .day {
+      font-size: $small-font-size * 0.6;
+    }
+
+    img {
+      max-width: 80%;
+    }
+  }
 }

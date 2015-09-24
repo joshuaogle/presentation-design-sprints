@@ -1291,27 +1291,29 @@ body {
 
 @font-face {
   font-family: "Colfax";
+  src: url("Colfax-Medium.woff") format("woff");
   font-weight: normal;
-  src: url("Colfax-Regular.woff") format("woff"); }
+  font-style: normal; }
 
 @font-face {
-  font-family: "Colfax";
+  font-family: "ColfaxLighter";
+  src: url("Colfax-Light.woff") format("woff");
   font-weight: lighter;
-  src: url("Colfax-Light.woff") format("woff"); }
+  font-style: normal; }
 
 @font-face {
-  font-family: "Colfax";
+  font-family: "ColfaxBold";
+  src: url("Colfax-Bold.woff") format("woff");
   font-weight: bold;
-  src: url("Colfax-Bold.woff") format("woff"); }
+  font-style: normal; }
 
 body {
   background-color: #fff;
   color: #c52d2f; }
 
 .reveal {
-  font-family: Helvetica, sans-serif;
-  font-size: 35px;
-  font-weight: normal; }
+  font-family: ColfaxLighter, Helvetica, sans-serif;
+  font-size: 30px; }
   .reveal .controls {
     display: none; }
   .reveal .progress {
@@ -1327,7 +1329,6 @@ body {
   .reveal h1, .reveal h2, .reveal h3 {
     color: #c52d2f;
     font-family: Colfax, Helvetica, sans-serif;
-    font-weight: 100;
     letter-spacing: normal;
     line-height: 1.2;
     margin: 0 0 20px 0;
@@ -1335,17 +1336,17 @@ body {
     text-transform: none;
     word-wrap: break-word; }
   .reveal h1 {
-    font-size: 70px; }
+    font-size: 60px; }
   .reveal h2 {
-    font-size: 63px; }
+    font-size: 54px; }
   .reveal h3 {
-    font-size: 49px; }
+    font-size: 42px; }
   .reveal .day {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: normal;
     line-height: 1em;
     margin: 1em 0 0;
-    opacity: 0.5;
-    text-style: italic; }
+    opacity: 0.5; }
   .reveal p {
     margin: 20px 0;
     line-height: 1.3; }
@@ -1369,6 +1370,8 @@ body {
     list-style-type: decimal; }
   .reveal ul {
     list-style-type: disc; }
+    .reveal ul li {
+      margin: 0.5em 0; }
     .reveal ul ul {
       list-style-type: square;
       display: block;
@@ -1469,7 +1472,9 @@ body {
     color: #fff;
     background: #068ee9; }
   .reveal section img {
-    margin: 15px 0px; }
+    margin: 15px 0px;
+    max-height: 5em;
+    vertical-align: middle; }
   .reveal a img {
     -webkit-transition: all 0.15s linear;
             transition: all 0.15s linear; }
@@ -1482,7 +1487,16 @@ body {
   .reveal .slides .has-dark-background * {
     color: #fff; }
   .reveal .links a {
-    font-size: 28px; }
+    font-size: 24px; }
+  .reveal .history {
+    color: #AAA;
+    font-size: 1.5em; }
+    .reveal .history-google-ventures {
+      max-width: 30%; }
+    .reveal .history-thoughtbot {
+      max-height: 3em; }
+    .reveal .history .divider {
+      margin: 0 1em; }
 
 ::-moz-selection {
   color: #fff;
@@ -1493,3 +1507,17 @@ body {
   color: #fff;
   background: #bee4fd;
   text-shadow: none; }
+
+.schedule-list li {
+  float: left;
+  font-size: 19.2px;
+  list-style: none;
+  padding: 0 1%;
+  text-align: center;
+  width: 18%; }
+  .schedule-list li h2 {
+    font-size: 21.6px; }
+  .schedule-list li .day {
+    font-size: 14.4px; }
+  .schedule-list li img {
+    max-width: 80%; }
