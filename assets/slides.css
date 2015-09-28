@@ -1473,7 +1473,6 @@ body {
     background: #068ee9; }
   .reveal section img {
     margin: 15px 0px;
-    max-height: 5em;
     vertical-align: middle; }
   .reveal a img {
     -webkit-transition: all 0.15s linear;
