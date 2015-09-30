@@ -1496,6 +1496,8 @@ body {
       max-height: 3em; }
     .reveal .history .divider {
       margin: 0 1em; }
+  .reveal .logo-thoughtbot {
+    max-width: 50%; }
 
 ::-moz-selection {
   color: #fff;
