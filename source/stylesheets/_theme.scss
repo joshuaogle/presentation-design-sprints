@@ -142,21 +142,33 @@ body {
   }
 
   blockquote {
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid $slate;
+    border-top: 2px solid $slate;
     display: block;
     font-style: italic;
     margin: 20px auto;
-    padding: 5px;
+    padding: 2em 0;
     position: relative;
     quotes: none;
     width: 70%;
 
     p {
+      font-size: $large-font-size;
+      
       &:first-child,
       &:last-child {
         display: inline-block;
       }
+
+      &::before,
+      &::after {
+        content: "\""
+      }
+    }
+
+    .author {
+      color: $slate;
+      font-size: $small-font-size;
     }
   }
 

@@ -1394,18 +1394,26 @@ body {
   .reveal q {
     quotes: none; }
   .reveal blockquote {
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #393b44;
+    border-top: 2px solid #393b44;
     display: block;
     font-style: italic;
     margin: 20px auto;
-    padding: 5px;
+    padding: 2em 0;
     position: relative;
     quotes: none;
     width: 70%; }
-    .reveal blockquote p:first-child,
-    .reveal blockquote p:last-child {
-      display: inline-block; }
+    .reveal blockquote p {
+      font-size: 36px; }
+      .reveal blockquote p:first-child,
+      .reveal blockquote p:last-child {
+        display: inline-block; }
+      .reveal blockquote p::before,
+      .reveal blockquote p::after {
+        content: "\""; }
+    .reveal blockquote .author {
+      color: #393b44;
+      font-size: 24px; }
   .reveal q {
     font-style: italic; }
   .reveal code {
