@@ -1355,6 +1355,8 @@ body {
   .reveal iframe {
     max-width: 95%;
     max-height: 95%; }
+  .reveal .illustration {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
   .reveal strong,
   .reveal b {
     font-weight: bold; }

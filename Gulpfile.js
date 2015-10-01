@@ -28,7 +28,8 @@ gulp.task("layout", function() {
 	return gulp.src(paths.templates_master)
 	  .pipe(nunjucksRender({
 			red: "#c52d2f",
-			slate: "#393b44"
+			slate: "#393b44",
+			smoke: "#ececec",
 		}))
 		.pipe(rename("index.html"))
 		.pipe(gulp.dest(paths.root))
