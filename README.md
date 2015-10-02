@@ -16,8 +16,8 @@
 
 ### Say hi sometime
 
-- [Marvel](http://twitter.com/joshuaogle): Me on Twitter
-- [Marvel](http://twitter.com/thoughtbot): @thoughtbot on Twitter
+- [@joshuaogle on Twitter](http://twitter.com/joshuaogle)
+- [@thoughtbot on Twitter](http://twitter.com/thoughtbot)
 
 ---
 

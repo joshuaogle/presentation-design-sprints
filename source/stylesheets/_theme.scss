@@ -154,7 +154,7 @@ body {
 
     p {
       font-size: $large-font-size;
-      
+
       &:first-child,
       &:last-child {
         display: inline-block;
@@ -322,6 +322,10 @@ body {
 
   .logo-thoughtbot {
     max-width: 50%;
+  }
+
+  .time {
+    @extend small;
   }
 }
 
