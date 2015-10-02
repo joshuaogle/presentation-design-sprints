@@ -1,3 +1,6 @@
+### See the slides
+- [http://joshuaogle.github.io/presentation-design-sprints](http://joshuaogle.github.io/presentation-design-sprints)
+
 ### Great articles on Product Design Sprints
 - [The Product Design Sprint](https://robots.thoughtbot.com/the-product-design-sprint)
 - [Google Ventures: The Design Sprint](http://www.gv.com/sprint)
