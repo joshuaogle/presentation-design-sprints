@@ -1,21 +1,22 @@
-## Links
-
 ### Great articles on Product Design Sprints
-
+- [The Product Design Sprint](https://robots.thoughtbot.com/the-product-design-sprint)
+- [Google Ventures: The Design Sprint](http://www.gv.com/sprint)
 
 ### thoughtbot resources
-- [Marvel](https://github.com/thoughtbot/design-sprint):
-- [Marvel](http://github.com/joshuaogle/presentation-design-sprints):
-- [Marvel](http://github.com/joshuaogle/presentation-design-sprints):
+- [Design Sprint Docs](https://github.com/thoughtbot/design-sprint)
+- [Design Sprint Trello Board](https://trello.com/b/lMmuSlkP/public-design-sprint-template)
 
-### Protyping Apps
-
+### Clickable Prototype Apps
 - [Marvel](http://marvelapp.com): Web app for clickable prototypes
 - [InVision](http://invisionapp.com): Save as Marvel, but better with collaboration
 - [Principle](http://principleformac.com): Protyping and animation app for Mac
 
-### Say hi sometime
+### HTML Prototype Tools
+- [Middleman](http://middlemanapp.com)
+- [Proteus](http://thoughtbot.github.io/proteus)
+- [Bourbon Suite](http://bourbon.io)
 
+### Say hi sometime
 - [@joshuaogle on Twitter](http://twitter.com/joshuaogle)
 - [@thoughtbot on Twitter](http://twitter.com/thoughtbot)
 
