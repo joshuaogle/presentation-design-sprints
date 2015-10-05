@@ -1314,8 +1314,6 @@ body {
 .reveal {
   font-family: ColfaxLighter, Helvetica, sans-serif;
   font-size: 32px; }
-  .reveal .controls {
-    display: none; }
   .reveal .progress {
     background-color: #000; }
     .reveal .progress span {
