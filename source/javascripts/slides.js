@@ -12,7 +12,6 @@ var prefix = 'node_modules/reveal.js/plugin'
 document.addEventListener('DOMContentLoaded', (event) => {
 	window.Reveal = Reveal
 	Reveal.initialize({
-		controls: false,
 		progress: true,
 		history: true,
 		center: true,
