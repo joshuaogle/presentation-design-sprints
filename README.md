@@ -1,5 +1,7 @@
-### See the slides
-- [http://joshuaogle.github.io/presentation-design-sprints](http://joshuaogle.github.io/presentation-design-sprints)
+### Watch the Presentation
+- [See the slides](http://joshuaogle.github.io/presentation-design-sprints)
+- [Video from Thunder Plains
+  2015](https://www.youtube.com/watch?v=8w4BZNAoPHY)
 
 ### Great articles on Product Design Sprints
 - [The Product Design Sprint](https://robots.thoughtbot.com/the-product-design-sprint)
